@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actum Est | Official Manifest</title>
-    <!-- Fontes profissionais para estética Black Metal -->
+    <title>Actum Est | Official Website</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
@@ -73,19 +72,22 @@
             border-bottom: 1px dashed #1a1a1a;
             padding: 25px 0;
         }
-        /* Espaço para embeds de música futuramente */
-        .audio-player-container {
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border: 1px solid #1a1a1a;
             margin: 40px 0;
-            background: #0d0d0d;
-            border: 1px dashed #222;
-            padding: 20px;
-            text-align: center;
         }
-        .audio-player-container span {
-            font-family: 'Cinzel', serif;
-            font-size: 0.75em;
-            color: #444;
-            letter-spacing: 2px;
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
         footer {
             margin-top: 50px;
@@ -157,17 +159,17 @@
             What is done cannot be undone.<br>Actum Est.
         </div>
 
-        <!-- Seção de Música Reservada -->
-        <div class="audio-player-container">
-            <span>[ Audio Manifestations Pending ]</span>
-            <!-- No futuro, colaremos o código do widget do Bandcamp ou Spotify aqui -->
+        <!-- Player de Vídeo/Áudio do YouTube Integrado -->
+        <div class="video-container">
+            <!-- Caso queira trocar o vídeo depois, basta substituir o código final após "embed/" pelo ID do seu vídeo -->
+            <iframe src="https://youtube.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         
         <footer>
             <div class="links-title">Connections</div>
             <div class="nav-links">
-                <a href="https://instagram.com" target="_blank" class="btn">Instagram</a>
-                <a href="https://youtube.com" target="_blank" class="btn">YouTube</a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn">Instagram</a>
+                <a href="https://www.youtube.com/@actumestofficial" target="_blank" rel="noopener noreferrer" class="btn">YouTube</a>
             </div>
         </footer>
     </div>
