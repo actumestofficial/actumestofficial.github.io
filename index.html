@@ -81,9 +81,10 @@
             width: 420px;
             height: auto;
             /* Remove o fundo preto da imagem do logo tornando-o transparente */
-            mix-blend-mode: screen; 
-            filter: brightness(1.1) contrast(1.2) drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
-            transition: all 0.5s ease;
+            mix-blend-mode:  lighten; /* ou screen */
+            /*filter: brightness(1.1) contrast(1.2) drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));*/
+            filter: brightness(1.2) contrast(1.4) grayscale(100%);
+            transition: all 0.5s ease;    
         }
 
         .logo-band:hover {
