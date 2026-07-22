@@ -7,7 +7,7 @@
     
     <!-- Meta Tags para SEO e Google Search -->
     <title>Actum Est | Official Website | Black Metal</title>
-    <meta name="description" content="Official website of Actum Est. Black Metal project founded in 1996 by Delarvoth. Listen on Spotify, view official discography and connections.">
+    <meta name="description" content="Official website of Actum Est. Black Metal project founded in 1996 by Delarvoth. Listen to The Great Descent on Spotify & Bandcamp. Watch official videos.">
 
     <!-- Dados Estruturados Schema.org para o Google -->
     <script type="application/ld+json">
@@ -19,6 +19,7 @@
       "genre": ["Black Metal", "Atmospheric Black Metal", "Symphonic Black Metal"],
       "sameAs": [
         "https://open.spotify.com/artist/7e4yn51txFDBXPvlZLp7mO",
+        "https://actumest.bandcamp.com/album/the-great-descent-2",
         "https://www.metal-archives.com/bands/Actum_Est/",
         "https://www.instagram.com/actumestofficial/",
         "https://www.youtube.com/@actumestofficial"
@@ -26,121 +27,274 @@
     }
     </script>
 
+    <!-- Fontes e Ícones -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
+
         body {
             font-family: 'Cardo', serif;
             background-color: #030303;
-            color: #999999;
-            margin: 0;
-            padding: 60px 20px;
+            /* Textura Abstrata via CSS radial-gradient e ruído dark */
+            background-image: 
+                radial-gradient(circle at 50% 20%, rgba(20, 20, 20, 0.8), rgba(3, 3, 3, 0.98) 70%),
+                radial-gradient(circle at 10% 80%, rgba(15, 10, 10, 0.3), transparent 50%),
+                radial-gradient(circle at 90% 90%, rgba(10, 10, 15, 0.3), transparent 50%);
+            background-attachment: fixed;
+            color: #a0a0a0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 60px 20px;
             letter-spacing: 0.5px;
         }
+
         .wrapper {
-            max-width: 680px;
+            max-width: 780px;
             width: 100%;
-            background-color: #080808;
-            padding: 50px 40px;
-            border: 1px solid #121212;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.95);
+            background-color: rgba(8, 8, 8, 0.92);
+            padding: 55px 45px;
+            border: 1px solid #1a1a1a;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.95), inset 0 0 30px rgba(0, 0, 0, 0.8);
+            position: relative;
         }
+
         header {
             text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #161616;
+            margin-bottom: 45px;
+            border-bottom: 1px solid #181818;
             padding-bottom: 35px;
         }
+
         .logo-band {
             max-width: 100%;
             height: auto;
             max-height: 220px;
-            filter: brightness(0.9) contrast(1.1);
+            filter: brightness(0.9) contrast(1.15) drop-shadow(0 0 10px rgba(0,0,0,0.8));
             margin-bottom: 15px;
+            transition: filter 0.5s ease;
         }
+
+        .logo-band:hover {
+            filter: brightness(1) contrast(1.2) drop-shadow(0 0 15px rgba(255,255,255,0.1));
+        }
+
         .subtitle {
             font-family: 'Cinzel', serif;
             font-size: 0.85em;
-            color: #444444;
-            letter-spacing: 5px;
+            color: #555555;
+            letter-spacing: 6px;
             text-transform: uppercase;
             margin-top: 15px;
         }
+
         .bio-content p {
-            font-size: 1.1em;
+            font-size: 1.08em;
             line-height: 1.9;
             margin-bottom: 24px;
             text-align: justify;
-            color: #8c8c8c;
+            color: #888888;
         }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            font-size: 1.1em;
+            color: #cccccc;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin: 50px 0 25px 0;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: #333333;
+            margin: 12px auto 0 auto;
+        }
+
         .manifesto {
             font-family: 'Cinzel', serif;
             text-align: center;
-            margin: 45px 0;
+            margin: 50px 0;
             color: #ffffff;
-            font-size: 1em;
-            letter-spacing: 2px;
+            font-size: 1.05em;
+            letter-spacing: 3px;
             line-height: 2;
-            border-top: 1px dashed #1a1a1a;
-            border-bottom: 1px dashed #1a1a1a;
-            padding: 25px 0;
+            border-top: 1px dashed #1c1c1c;
+            border-bottom: 1px dashed #1c1c1c;
+            padding: 30px 0;
+            background: rgba(0, 0, 0, 0.3);
         }
+
+        /* Seção de Discografia */
+        .album-card {
+            display: flex;
+            gap: 30px;
+            background: #040404;
+            border: 1px solid #161616;
+            padding: 25px;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+
+        .album-cover {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 1px solid #222222;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+            flex-shrink: 0;
+        }
+
+        .album-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .album-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3em;
+            color: #ffffff;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .album-meta {
+            font-size: 0.85em;
+            color: #555555;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .album-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* Player de Vídeo Responsivo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            border: 1px solid #161616;
+            background: #000;
+            margin-bottom: 35px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Player do Spotify Container */
         .spotify-container {
-            margin: 45px 0 25px 0;
+            margin-bottom: 40px;
             background: #000000;
             border: 1px solid #161616;
             padding: 10px;
             border-radius: 8px;
         }
+
+        /* Rodapé e Botões */
         footer {
-            margin-top: 50px;
+            margin-top: 55px;
             text-align: center;
+            border-top: 1px solid #181818;
+            padding-top: 40px;
         }
+
         .links-title {
             font-family: 'Cinzel', serif;
             font-size: 0.75em;
-            color: #3b3b3b;
+            color: #444444;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
+
         .nav-links {
             display: flex;
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
+            margin-bottom: 35px;
         }
+
         .btn {
             font-family: 'Cinzel', serif;
-            display: inline-block;
-            padding: 12px 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
             border: 1px solid #1e1e1e;
-            color: #555555;
+            color: #666666;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.8em;
+            font-size: 0.78em;
             letter-spacing: 2px;
             transition: all 0.4s ease;
             background: transparent;
         }
+
         .btn:hover {
             border-color: #ffffff;
             color: #ffffff;
             background-color: #0b0b0b;
-            box-shadow: 0 0 12px rgba(255,255,255,0.08);
+            box-shadow: 0 0 15px rgba(255,255,255,0.08);
         }
-        @media (max-width: 480px) {
-            body { padding: 30px 15px; }
+
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.7em;
+        }
+
+        .contact-box {
+            font-size: 0.85em;
+            color: #555555;
+            letter-spacing: 1px;
+        }
+
+        .contact-box a {
+            color: #888888;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-box a:hover {
+            color: #ffffff;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            body { padding: 20px 10px; }
             .wrapper { padding: 30px 20px; }
+            .album-card { flex-direction: column; text-align: center; }
+            .album-cover { width: 100%; height: auto; max-width: 240px; margin: 0 auto; }
+            .album-links { justify-content: center; }
             .subtitle { font-size: 0.75em; letter-spacing: 3px; }
+            .btn { width: 100%; justify-content: center; }
         }
     </style>
 </head>
@@ -170,17 +324,60 @@
             What is done cannot be undone.<br>Actum Est.
         </div>
 
-        <!-- Player do Spotify Oficial -->
+        <!-- Seção de Discografia -->
+        <div class="section-title">Discography</div>
+        
+        <div class="album-card">
+            <img src="https://f4.bcbits.com/img/a0588641916_10.jpg" alt="The Great Descent Album Cover" class="album-cover">
+            <div class="album-info">
+                <div class="album-title">The Great Descent</div>
+                <div class="album-meta">Official Release</div>
+                <div class="album-links">
+                    <a href="https://actumest.bandcamp.com/album/the-great-descent-2" target="_blank" rel="noopener noreferrer" class="btn btn-small">
+                        <i class="fa-fab fa-bandcamp"></i> Bandcamp
+                    </a>
+                    <a href="https://open.spotify.com/artist/7e4yn51txFDBXPvlZLp7mO" target="_blank" rel="noopener noreferrer" class="btn btn-small">
+                        <i class="fa-fab fa-spotify"></i> Spotify
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Vídeo em Destaque -->
+        <div class="section-title">Featured Video</div>
+        
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/p4aBFVsRSFE" title="Actum Est - We Burn the Skies Tonight" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Player de Áudio do Spotify -->
+        <div class="section-title">Stream</div>
+        
         <div class="spotify-container">
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/7e4yn51txFDBXPvlZLp7mO?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
         
+        <!-- Rodapé e Contato -->
         <footer>
-            <div class="links-title">Connections</div>
+            <div class="links-title">Official Connections</div>
+            
             <div class="nav-links">
-                <a href="https://open.spotify.com/artist/7e4yn51txFDBXPvlZLp7mO" target="_blank" rel="noopener noreferrer" class="btn">Spotify</a>
-                <a href="https://www.instagram.com/actumestofficial/" target="_blank" rel="noopener noreferrer" class="btn">Instagram</a>
-                <a href="https://www.youtube.com/@actumestofficial" target="_blank" rel="noopener noreferrer" class="btn">YouTube</a>
+                <a href="https://open.spotify.com/artist/7e4yn51txFDBXPvlZLp7mO" target="_blank" rel="noopener noreferrer" class="btn">
+                    <i class="fa-brands fa-spotify"></i> Spotify
+                </a>
+                <a href="https://actumest.bandcamp.com/album/the-great-descent-2" target="_blank" rel="noopener noreferrer" class="btn">
+                    <i class="fa-brands fa-bandcamp"></i> Bandcamp
+                </a>
+                <a href="https://www.instagram.com/actumestofficial/" target="_blank" rel="noopener noreferrer" class="btn">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.youtube.com/@actumestofficial" target="_blank" rel="noopener noreferrer" class="btn">
+                    <i class="fa-brands fa-youtube"></i> YouTube
+                </a>
+            </div>
+
+            <div class="contact-box">
+                Contact & Inquiries: <a href="mailto:actumestofficial@gmail.com">actumestofficial@gmail.com</a>
             </div>
         </footer>
     </div>
