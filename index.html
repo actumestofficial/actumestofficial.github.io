@@ -5,11 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="FQJVM4VrwvEyQUP0mDajzqXOc5_LNB5x6rH7Ilc8bT0" />
     
-    <!-- Meta Tags para SEO e Google Search -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" href="https://f4.bcbits.com/img/0045807217_20.jpg">
+
+    <!-- SEO & Meta Tags Básicas -->
     <title>Actum Est | Official Website | Black Metal</title>
     <meta name="description" content="Official website of Actum Est. Black Metal project founded in 1996 by Delarvoth. Listen to The Great Descent on Spotify & Bandcamp. Watch official videos.">
 
-    <!-- Dados Estruturados Schema.org para o Google -->
+    <!-- Open Graph / WhatsApp / Facebook / Instagram -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://actumestofficial.github.io/">
+    <meta property="og:title" content="Actum Est | Official Website | Black Metal">
+    <meta property="og:description" content="Black Metal project founded in 1996 by Delarvoth. Discover the discography, watch videos, and listen to official releases.">
+    <meta property="og:image" content="https://f4.bcbits.com/img/a0588641916_10.jpg">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://actumestofficial.github.io/">
+    <meta property="twitter:title" content="Actum Est | Official Website | Black Metal">
+    <meta property="twitter:description" content="Black Metal project founded in 1996 by Delarvoth. Discover the discography and official releases.">
+    <meta property="twitter:image" content="https://f4.bcbits.com/img/a0588641916_10.jpg">
+
+    <!-- Schema.org para o Google -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -34,6 +51,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -43,7 +64,6 @@
         body {
             font-family: 'Cardo', serif;
             background-color: #030303;
-            /* Textura e atmosfera geral do fundo */
             background-image: 
                 radial-gradient(circle at 50% 0%, rgba(30, 30, 30, 0.5), rgba(3, 3, 3, 0.98) 70%);
             background-attachment: fixed;
@@ -55,7 +75,37 @@
             letter-spacing: 0.5px;
         }
 
-        /* BANNER HERO DE TOPO (NOVO) */
+        /* BARRA DE NAVEGAÇÃO FIXA */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(3, 3, 3, 0.85);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+        }
+
+        .top-nav a {
+            font-family: 'Cinzel', serif;
+            color: #777777;
+            text-decoration: none;
+            font-size: 0.72em;
+            letter-spacing: 3px;
+            margin: 0 15px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .top-nav a:hover {
+            color: #ffffff;
+        }
+
+        /* BANNER HERO DE TOPO */
         .hero-header {
             width: 100%;
             height: 60vh;
@@ -66,30 +116,28 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* Fundo com imagem atmosférica de floresta obscura + gradiente para o preto */
             background: 
-                linear-gradient(to bottom, rgba(3, 3, 3, 0.3) 0%, rgba(3, 3, 3, 0.85) 75%, #030303 100%),
+                linear-gradient(to bottom, rgba(3, 3, 3, 0.4) 0%, rgba(3, 3, 3, 0.85) 75%, #030303 100%),
                 url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
             border-bottom: 1px solid #1a1a1a;
             box-shadow: 0 10px 30px rgba(0,0,0,0.9);
-            margin-bottom: -40px; /* Sobrepõe suavemente com o wrapper */
+            margin-bottom: -40px;
             z-index: 1;
+            padding-top: 40px;
         }
 
         .logo-band {
             max-width: 85%;
             width: 420px;
             height: auto;
-            /* Remove o fundo preto da imagem do logo tornando-o transparente */
-            mix-blend-mode:  lighten; /* ou screen */
-            /*filter: brightness(1.1) contrast(1.2) drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));*/
-            filter: brightness(1.2) contrast(1.4) grayscale(100%);
-            transition: all 0.5s ease;    
+            mix-blend-mode: screen; 
+            filter: brightness(1.25) contrast(1.45) drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
+            transition: all 0.5s ease;
         }
 
         .logo-band:hover {
             transform: scale(1.02);
-            filter: brightness(1.2) contrast(1.3) drop-shadow(0 0 25px rgba(255, 255, 255, 0.3));
+            filter: brightness(1.35) contrast(1.5) drop-shadow(0 0 25px rgba(255, 255, 255, 0.3));
         }
 
         .subtitle {
@@ -100,6 +148,12 @@
             text-transform: uppercase;
             margin-top: 25px;
             text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+        }
+
+        /* ANIMAÇÃO DE ENTRADA SUAVE (FADE-IN) */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* CONTEÚDO PRINCIPAL */
@@ -113,6 +167,7 @@
             position: relative;
             z-index: 2;
             margin-bottom: 60px;
+            animation: fadeIn 1.2s ease-out forwards;
         }
 
         .bio-content p {
@@ -130,8 +185,9 @@
             color: #cccccc;
             letter-spacing: 4px;
             text-transform: uppercase;
-            margin: 50px 0 25px 0;
+            margin: 55px 0 25px 0;
             position: relative;
+            padding-top: 15px;
         }
 
         .section-title::after {
@@ -226,7 +282,7 @@
             border: 0;
         }
 
-        /* SPOTIFY */
+        /* SPOTIFY CONTAINER */
         .spotify-container {
             margin-bottom: 40px;
             background: #000000;
@@ -304,7 +360,9 @@
             color: #ffffff;
         }
 
+        /* RESPONSIVIDADE */
         @media (max-width: 600px) {
+            .top-nav a { margin: 0 7px; font-size: 0.65em; letter-spacing: 1.5px; }
             .hero-header { height: 45vh; min-height: 280px; }
             .wrapper { padding: 30px 20px; width: 95%; }
             .album-card { flex-direction: column; text-align: center; }
@@ -317,7 +375,16 @@
 </head>
 <body>
 
-    <!-- CABEÇALHO HERO EM LARGURA TOTAL -->
+    <!-- MENU FIXO DE NAVEGAÇÃO -->
+    <nav class="top-nav">
+        <a href="#bio">Bio</a>
+        <a href="#discography">Discography</a>
+        <a href="#video">Video</a>
+        <a href="#stream">Stream</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- CABEÇALHO HERO -->
     <header class="hero-header">
         <img src="https://f4.bcbits.com/img/0045807217_20.jpg" alt="Actum Est Logo" class="logo-band">
         <div class="subtitle">Black Metal</div>
@@ -326,7 +393,7 @@
     <!-- CONTEÚDO DO SITE -->
     <div class="wrapper">
         
-        <div class="bio-content">
+        <div id="bio" class="bio-content">
             <p>Founded in 1996 by Delarvoth, Actum Est is the manifestation of a singular and uncompromising vision, a project forged in solitude and shaped by introspection.</p>
             
             <p>Actum Est crafts immersive soundscapes where darkness becomes language. Each composition unfolds like a ritual, where cold melodies and oppressive harmonies converge into a vast, introspective experience.</p>
@@ -345,7 +412,7 @@
         </div>
 
         <!-- Seção de Discografia -->
-        <div class="section-title">Discography</div>
+        <div id="discography" class="section-title">Discography</div>
         
         <div class="album-card">
             <img src="https://f4.bcbits.com/img/a0588641916_10.jpg" alt="The Great Descent Album Cover" class="album-cover">
@@ -363,22 +430,22 @@
             </div>
         </div>
 
-        <!-- Seção de Vídeo em Destaque -->
-        <div class="section-title">Featured Video</div>
+        <!-- Seção de Vídeo -->
+        <div id="video" class="section-title">Featured Video</div>
         
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/p4aBFVsRSFE" title="Actum Est - We Burn the Skies Tonight" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <!-- Player de Áudio do Spotify -->
-        <div class="section-title">Stream</div>
+        <!-- Seção de Stream -->
+        <div id="stream" class="section-title">Stream</div>
         
         <div class="spotify-container">
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/7e4yn51txFDBXPvlZLp7mO?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
         
         <!-- Rodapé e Contato -->
-        <footer>
+        <footer id="contact">
             <div class="links-title">Official Connections</div>
             
             <div class="nav-links">
