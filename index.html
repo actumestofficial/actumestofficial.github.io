@@ -5,29 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="FQJVM4VrwvEyQUP0mDajzqXOc5_LNB5x6rH7Ilc8bT0" />
     <meta name="robots" content="index, follow, max-image-preview:large">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpg" href="https://f4.bcbits.com/img/0045807217_20.jpg">
-    <link rel="canonical" href="https://actumestofficial.github.io/" />
-    <!-- SEO & Meta Tags Básicas -->
-    <title>Actum Est | Official Website | Black Metal</title>
-    <meta name="description" content="Official website of Actum Est. Black Metal project founded in 1996 by Delarvoth. Listen to The Great Descent on Spotify & Bandcamp. Watch official videos.">
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
 
-    <!-- Open Graph / WhatsApp / Facebook / Instagram -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://f4.bcbits.com/img/0045807217_20.jpg">
+    <link rel="apple-touch-icon" href="https://f4.bcbits.com/img/0045807217_20.jpg">
+    <link rel="canonical" href="https://actumestofficial.github.io/" />
+
+    <!-- SEO -->
+    <title>Actum Est | Official Website | Black Metal</title>
+    <meta name="description" content="Official website of Actum Est, black metal project founded in 1996 by Delarvoth. Listen to The Great Descent and Into The Black Mantle on Spotify and watch the official videos.">
+
+    <!-- Open Graph (WhatsApp, Facebook, Instagram) -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Actum Est">
+    <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://actumestofficial.github.io/">
     <meta property="og:title" content="Actum Est | Official Website | Black Metal">
-    <meta property="og:description" content="Black Metal project founded in 1996 by Delarvoth. Discover the discography, watch videos, and listen to official releases.">
+    <meta property="og:description" content="Black metal project founded in 1996 by Delarvoth. Discography, official videos and streaming.">
     <meta property="og:image" content="https://f4.bcbits.com/img/a0588641916_10.jpg">
+    <meta property="og:image:alt" content="Cover art of The Great Descent by Actum Est">
 
-    <!-- Twitter Card -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://actumestofficial.github.io/">
-    <meta property="twitter:title" content="Actum Est | Official Website | Black Metal">
-    <meta property="twitter:description" content="Black Metal project founded in 1996 by Delarvoth. Discover the discography and official releases.">
-    <meta property="twitter:image" content="https://f4.bcbits.com/img/a0588641916_10.jpg">
+    <!-- Twitter / X (usa "name", não "property") -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://actumestofficial.github.io/">
+    <meta name="twitter:title" content="Actum Est | Official Website | Black Metal">
+    <meta name="twitter:description" content="Black metal project founded in 1996 by Delarvoth. Discography, official videos and streaming.">
+    <meta name="twitter:image" content="https://f4.bcbits.com/img/a0588641916_10.jpg">
 
-    <!-- Schema.org para o Google -->
+    <!-- Schema.org: os perfis em sameAs ajudam o Google a ligar a banda ao site -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -37,11 +44,28 @@
       "url": "https://actumestofficial.github.io/",
       "logo": "https://f4.bcbits.com/img/0045807217_20.jpg",
       "image": "https://f4.bcbits.com/img/a0588641916_10.jpg",
-      "description": "Black Metal project founded in 1996 by Delarvoth.",
+      "description": "Black metal project founded in 1996 by Delarvoth.",
       "genre": ["Black Metal", "Atmospheric Black Metal", "Symphonic Black Metal"],
       "foundingDate": "1996",
+      "founder": { "@type": "Person", "name": "Delarvoth" },
+      "email": "actumestofficial@gmail.com",
+      "album": [
+        {
+          "@type": "MusicAlbum",
+          "name": "The Great Descent",
+          "image": "https://f4.bcbits.com/img/a0588641916_10.jpg",
+          "byArtist": { "@id": "https://actumestofficial.github.io/#musicgroup" }
+        },
+        {
+          "@type": "MusicAlbum",
+          "name": "Into The Black Mantle",
+          "url": "https://open.spotify.com/album/2bNxKkE2P4L1Vvq4cWHrdC",
+          "image": "https://i.scdn.co/image/ab67616d00001e02c52839d453ba0c5dc442ec03",
+          "byArtist": { "@id": "https://actumestofficial.github.io/#musicgroup" }
+        }
+      ],
       "sameAs": [
-        "https://open.spotify.com/artist/7e4yn51txFDBXPvlZLp7mO",       
+        "https://open.spotify.com/artist/7e4yn51txFDBXPvlZLp7mO",
         "https://www.metal-archives.com/bands/Actum_Est/",
         "https://www.instagram.com/actumestofficial/",
         "https://www.youtube.com/@actumestofficial"
@@ -49,452 +73,681 @@
     }
     </script>
 
-    <!-- Fontes e Ícones -->
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        html {
-            scroll-behavior: smooth;
+        :root {
+            --black: #000000;
+            --surface: #070707;
+            --raised: #0d0d0d;
+            --line: #222222;
+            --line-strong: #3a3a3a;
+            --text: #b3b3b3;
+            --muted: #8f8f8f;
+            --bright: #ededed;
+            --display: 'Cinzel', 'Trajan Pro', 'Times New Roman', serif;
+            --body: 'Cardo', 'Garamond', 'Georgia', serif;
+            --nav-h: 52px;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; background: var(--black); }
+
+        /* Compensa a barra fixa ao clicar no menu */
+        [id] { scroll-margin-top: calc(var(--nav-h) + 24px); }
 
         body {
-            font-family: 'Cardo', serif;
-            background-color: #030303;
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(30, 30, 30, 0.5), rgba(3, 3, 3, 0.98) 70%);
-            background-attachment: fixed;
-            color: #a0a0a0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            font-family: var(--body);
+            background: var(--black);
+            color: var(--text);
+            line-height: 1.8;
+            letter-spacing: 0.2px;
             min-height: 100vh;
-            letter-spacing: 0.5px;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* BARRA DE NAVEGAÇÃO FIXA */
+        /* Grão de filme sobre toda a página */
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2000;
+            opacity: 0.07;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        img { max-width: 100%; display: block; }
+
+        a { color: inherit; }
+
+        a:focus-visible, button:focus-visible {
+            outline: 1px solid var(--bright);
+            outline-offset: 4px;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px; height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
+
+        .icon { width: 1.05em; height: 1.05em; fill: currentColor; flex-shrink: 0; }
+
+        /* ===== NAVEGAÇÃO ===== */
         .top-nav {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(3, 3, 3, 0.85);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            z-index: 1000;
+            top: 0; left: 0; right: 0;
+            height: var(--nav-h);
             display: flex;
             justify-content: center;
-            padding: 12px 0;
+            align-items: center;
+            gap: 4px;
+            background: rgba(0, 0, 0, 0.82);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            z-index: 1000;
         }
 
         .top-nav a {
-            font-family: 'Cinzel', serif;
-            color: #777777;
+            font-family: var(--display);
+            color: var(--muted);
             text-decoration: none;
-            font-size: 0.72em;
+            font-size: 0.72rem;
             letter-spacing: 3px;
-            margin: 0 15px;
             text-transform: uppercase;
+            padding: 10px 14px;
             transition: color 0.3s ease;
         }
 
-        .top-nav a:hover {
-            color: #ffffff;
-        }
+        .top-nav a:hover { color: var(--bright); }
 
-        /* BANNER HERO DE TOPO */
-        .hero-header {
-            width: 100%;
-            height: 60vh;
-            min-height: 380px;
-            max-height: 520px;
+        /* ===== HERO ===== */
+        .hero {
             position: relative;
+            min-height: 88vh;
+            min-height: 88svh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: 
-                linear-gradient(to bottom, rgba(3, 3, 3, 0.4) 0%, rgba(3, 3, 3, 0.85) 75%, #030303 100%),
-                url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
-            border-bottom: 1px solid #1a1a1a;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.9);
-            margin-bottom: -40px;
-            z-index: 1;
-            padding-top: 40px;
+            text-align: center;
+            padding: calc(var(--nav-h) + 40px) 20px 90px;
+            overflow: hidden;
+            isolation: isolate;
         }
+
+        /* Arte do álbum como fundo, escurecida */
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: -40px;
+            z-index: -2;
+            background: url('https://f4.bcbits.com/img/a0588641916_10.jpg') center 35% / cover no-repeat;
+            filter: grayscale(100%) blur(3px) brightness(0.32) contrast(1.15);
+            transform: scale(1.05);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background:
+                radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 70%),
+                linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,1) 100%);
+        }
+
+        .hero h1 { line-height: 0; }
 
         .logo-band {
-            max-width: 85%;
-            width: 420px;
+            width: min(460px, 82vw);
             height: auto;
-            mix-blend-mode:  lighten; /* ou screen */
-            /*filter: brightness(1.1) contrast(1.2) drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));*/
+            margin: 0 auto;
+            mix-blend-mode: lighten;
             filter: brightness(1.2) contrast(1.4) grayscale(100%);
-            transition: all 0.5s ease;
+            animation: emerge 2.6s ease-out both;
         }
 
-        .logo-band:hover {
-            transform: scale(1.02);
-            filter: brightness(1.35) contrast(1.5) drop-shadow(0 0 25px rgba(255, 255, 255, 0.3));
-        }
-
-        .subtitle {
-            font-family: 'Cinzel', serif;
-            font-size: 0.9em;
-            color: #888888;
-            letter-spacing: 8px;
+        .hero-subtitle {
+            font-family: var(--display);
+            font-size: 0.85rem;
+            color: var(--muted);
+            letter-spacing: 7px;
             text-transform: uppercase;
-            margin-top: 25px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+            margin-top: 28px;
+            animation: rise 1.4s ease-out 1.4s both;
         }
 
-        /* ANIMAÇÃO DE ENTRADA SUAVE (FADE-IN) */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .hero-cta {
+            margin-top: 40px;
+            animation: rise 1.4s ease-out 1.9s both;
         }
 
-        /* CONTEÚDO PRINCIPAL */
-        .wrapper {
-            max-width: 780px;
-            width: 92%;
-            background-color: rgba(8, 8, 8, 0.94);
-            padding: 55px 45px;
-            border: 1px solid #1a1a1a;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.95);
+        .scroll-cue {
+            position: absolute;
+            bottom: 28px;
+            left: 50%;
+            width: 1px;
+            height: 44px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.45));
+            animation: rise 1.4s ease-out 2.4s both;
+        }
+
+        @keyframes emerge {
+            from { opacity: 0; filter: brightness(1.2) contrast(1.4) grayscale(100%) blur(10px); }
+            to   { opacity: 1; filter: brightness(1.2) contrast(1.4) grayscale(100%) blur(0); }
+        }
+
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== BOTÕES ===== */
+        .btn {
+            font-family: var(--display);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 26px;
+            border: 1px solid var(--line-strong);
+            color: var(--text);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.76rem;
+            letter-spacing: 2.5px;
+            background: rgba(0, 0, 0, 0.35);
+            transition: border-color 0.35s ease, color 0.35s ease, background-color 0.35s ease;
+        }
+
+        .btn:hover {
+            border-color: var(--bright);
+            color: var(--bright);
+            background-color: rgba(255, 255, 255, 0.04);
+        }
+
+        .btn-small { padding: 9px 18px; font-size: 0.7rem; }
+
+        /* ===== CONTEÚDO ===== */
+        main {
+            width: min(820px, 92%);
+            margin: -50px auto 0;
             position: relative;
             z-index: 2;
-            margin-bottom: 60px;
-            animation: fadeIn 1.2s ease-out forwards;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.95);
+            padding: 64px 56px 48px;
         }
 
-        .bio-content p {
-            font-size: 1.08em;
-            line-height: 1.9;
-            margin-bottom: 24px;
-            text-align: justify;
-            color: #888888;
-        }
+        section + section { margin-top: 88px; }
 
         .section-title {
-            font-family: 'Cinzel', serif;
+            font-family: var(--display);
+            font-weight: 400;
             text-align: center;
-            font-size: 1.1em;
-            color: #cccccc;
-            letter-spacing: 4px;
+            font-size: 1.15rem;
+            color: var(--bright);
+            letter-spacing: 5px;
             text-transform: uppercase;
-            margin: 55px 0 25px 0;
-            position: relative;
-            padding-top: 15px;
+            margin-bottom: 40px;
         }
 
         .section-title::after {
-            content: '';
+            content: "";
             display: block;
             width: 40px;
             height: 1px;
-            background: #333333;
-            margin: 12px auto 0 auto;
+            background: var(--line-strong);
+            margin: 16px auto 0;
         }
 
+        /* Bio */
+        .bio {
+            max-width: 62ch;
+            margin: 0 auto;
+        }
+
+        .bio p {
+            font-size: 1.12rem;
+            line-height: 1.9;
+            margin-bottom: 1.4em;
+        }
+
+        .bio p:first-of-type::first-letter {
+            font-family: var(--display);
+            float: left;
+            font-size: 3.6em;
+            line-height: 0.85;
+            padding: 0.08em 0.12em 0 0;
+            color: var(--bright);
+        }
+
+        .bio .credits {
+            margin: 36px 0 0;
+            padding-top: 22px;
+            border-top: 1px solid var(--line);
+            font-size: 0.98rem;
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        .credits strong { color: var(--text); font-weight: 400; font-style: normal; }
+
+        /* Manifesto */
         .manifesto {
-            font-family: 'Cinzel', serif;
+            margin: 72px auto 0;
             text-align: center;
-            margin: 50px 0;
-            color: #ffffff;
-            font-size: 1.05em;
+            font-family: var(--display);
+            color: var(--bright);
+            font-size: clamp(1.05rem, 2.6vw, 1.35rem);
             letter-spacing: 3px;
             line-height: 2;
-            border-top: 1px dashed #1c1c1c;
-            border-bottom: 1px dashed #1c1c1c;
-            padding: 30px 0;
-            background: rgba(0, 0, 0, 0.4);
         }
 
-        /* DISCOGRAFIA */
-        .album-card {
-            display: flex;
-            gap: 30px;
-            background: #040404;
-            border: 1px solid #161616;
-            padding: 25px;
-            align-items: center;
-            margin-bottom: 35px;
-        }
-
-        .album-cover {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border: 1px solid #222222;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.8);
-            flex-shrink: 0;
-        }
-
-        .album-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .album-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.3em;
-            color: #ffffff;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-        }
-
-        .album-meta {
-            font-size: 0.85em;
-            color: #555555;
+        .manifesto cite {
+            display: block;
+            margin-top: 6px;
+            font-style: normal;
+            color: var(--muted);
+            font-size: 0.8em;
+            letter-spacing: 6px;
             text-transform: uppercase;
+        }
+
+        .manifesto::before,
+        .manifesto::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 36px;
+            margin: 0 auto 22px;
+            background: var(--line-strong);
+        }
+
+        .manifesto::after { margin: 22px auto 0; }
+
+        /* Discografia */
+        .release {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 32px;
+            align-items: center;
+            padding: 26px;
+            background: var(--black);
+            border: 1px solid var(--line);
+        }
+
+        .release + .release { margin-top: 24px; }
+
+        .release-featured {
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            padding: 32px;
+        }
+
+        .release-cover {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.85);
+        }
+
+        .release-label {
+            font-family: var(--display);
+            font-size: 0.72rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .release-title {
+            font-family: var(--display);
+            font-weight: 600;
+            color: var(--bright);
+            font-size: 1.35rem;
             letter-spacing: 2px;
-            margin-bottom: 18px;
+            line-height: 1.3;
+            margin-bottom: 22px;
         }
 
-        .album-links {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
+        .release-featured .release-title { font-size: clamp(1.5rem, 3.4vw, 2rem); }
 
-        /* PLAYER DE VÍDEO */
-        .video-container {
+        .release-links { display: flex; gap: 12px; flex-wrap: wrap; }
+
+        /* Vídeos: a miniatura carrega primeiro; o player só ao clicar */
+        .video-list { display: grid; gap: 40px; }
+
+        .video-frame {
             position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
+            aspect-ratio: 16 / 9;
+            background: var(--black);
+            border: 1px solid var(--line);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
             overflow: hidden;
-            border: 1px solid #161616;
-            background: #000;
-            margin-bottom: 35px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
         }
 
-        .video-container iframe {
+        .video-frame iframe,
+        .video-play {
             position: absolute;
-            top: 0;
-            left: 0;
+            inset: 0;
             width: 100%;
             height: 100%;
             border: 0;
         }
 
-        /* SPOTIFY CONTAINER */
-        .spotify-container {
-            margin-bottom: 40px;
-            background: #000000;
-            border: 1px solid #161616;
-            padding: 10px;
-            border-radius: 8px;
+        .video-play {
+            display: block;
+            cursor: pointer;
+            background: var(--black);
         }
 
-        /* RODAPÉ */
-        footer {
-            margin-top: 55px;
+        .video-play img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(35%) brightness(0.7);
+            transition: filter 0.5s ease;
+        }
+
+        .video-play:hover img { filter: grayscale(0%) brightness(0.85); }
+
+        .play-mark {
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 74px; height: 74px;
+            transform: translate(-50%, -50%);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.45);
+            display: grid;
+            place-items: center;
+            transition: background-color 0.35s ease, border-color 0.35s ease;
+        }
+
+        .play-mark::before {
+            content: "";
+            margin-left: 5px;
+            border-style: solid;
+            border-width: 11px 0 11px 18px;
+            border-color: transparent transparent transparent #ffffff;
+        }
+
+        .video-play:hover .play-mark { background: rgba(0, 0, 0, 0.7); border-color: #ffffff; }
+
+        .video-caption {
+            font-family: var(--display);
             text-align: center;
-            border-top: 1px solid #181818;
-            padding-top: 40px;
+            margin-top: 16px;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            color: var(--text);
+        }
+
+        /* Spotify */
+        .spotify-embed {
+            background: var(--black);
+            border: 1px solid var(--line);
+            padding: 10px;
+        }
+
+        .spotify-embed iframe { display: block; border: 0; border-radius: 12px; }
+
+        /* Rodapé */
+        footer {
+            margin-top: 88px;
+            padding-top: 48px;
+            border-top: 1px solid var(--line);
+            text-align: center;
         }
 
         .links-title {
-            font-family: 'Cinzel', serif;
-            font-size: 0.75em;
-            color: #444444;
+            font-family: var(--display);
+            font-weight: 400;
+            font-size: 0.75rem;
+            color: var(--muted);
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 25px;
+            margin-bottom: 26px;
         }
 
-        .nav-links {
+        .footer-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 14px;
             flex-wrap: wrap;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
         }
 
-        .btn {
-            font-family: 'Cinzel', serif;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            border: 1px solid #1e1e1e;
-            color: #666666;
+        .contact {
+            font-size: 1rem;
+            color: var(--muted);
+        }
+
+        .contact a {
+            color: var(--text);
             text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.78em;
-            letter-spacing: 2px;
-            transition: all 0.4s ease;
-            background: transparent;
+            border-bottom: 1px solid var(--line-strong);
+            transition: color 0.3s ease, border-color 0.3s ease;
         }
 
-        .btn:hover {
-            border-color: #ffffff;
-            color: #ffffff;
-            background-color: #0b0b0b;
-            box-shadow: 0 0 15px rgba(255,255,255,0.08);
+        .contact a:hover { color: var(--bright); border-color: var(--bright); }
+
+        .copyright {
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #6f6f6f;
         }
 
-        .btn-small {
-            padding: 8px 16px;
-            font-size: 0.7em;
+        .page-end { height: 60px; }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 720px) {
+            main { padding: 44px 26px 36px; width: 94%; }
+            .release,
+            .release-featured {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 24px;
+                padding: 22px;
+            }
+            .release-cover { max-width: 300px; margin: 0 auto; }
+            .release-links { justify-content: center; }
         }
 
-        .contact-box {
-            font-size: 0.85em;
-            color: #555555;
-            letter-spacing: 1px;
+        @media (max-width: 520px) {
+            :root { --nav-h: 48px; }
+            .top-nav { gap: 0; }
+            .top-nav a { padding: 10px 7px; font-size: 0.62rem; letter-spacing: 1.5px; }
+            .hero-subtitle { font-size: 0.72rem; letter-spacing: 5px; }
+            .bio p { font-size: 1.05rem; }
+            .footer-links .btn,
+            .hero-cta { width: 100%; }
+            .play-mark { width: 60px; height: 60px; }
         }
 
-        .contact-box a {
-            color: #888888;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-box a:hover {
-            color: #ffffff;
-        }
-
-        /* RESPONSIVIDADE */
-        @media (max-width: 600px) {
-            .top-nav a { margin: 0 7px; font-size: 0.65em; letter-spacing: 1.5px; }
-            .hero-header { height: 45vh; min-height: 280px; }
-            .wrapper { padding: 30px 20px; width: 95%; }
-            .album-card { flex-direction: column; text-align: center; }
-            .album-cover { width: 100%; height: auto; max-width: 240px; margin: 0 auto; }
-            .album-links { justify-content: center; }
-            .subtitle { font-size: 0.75em; letter-spacing: 4px; }
-            .btn { width: 100%; justify-content: center; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- MENU FIXO DE NAVEGAÇÃO -->
-    <nav class="top-nav">
+    <!-- Ícones (SVG inline, sem biblioteca externa) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-spotify" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></symbol>
+        <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol>
+        <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+    </svg>
+
+    <!-- MENU -->
+    <nav class="top-nav" aria-label="Main">
         <a href="#bio">Bio</a>
         <a href="#discography">Discography</a>
-        <a href="#video">Video</a>
+        <a href="#videos">Videos</a>
         <a href="#stream">Stream</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- CABEÇALHO HERO -->
-    <header class="hero-header">
-        <img src="https://f4.bcbits.com/img/0045807217_20.jpg" alt="Actum Est Logo" class="logo-band">
-        <div class="subtitle">Black Metal</div>
+    <!-- HERO -->
+    <header class="hero">
+        <h1>
+            <img src="https://f4.bcbits.com/img/0045807217_20.jpg" alt="Actum Est" class="logo-band" width="460" height="230">
+        </h1>
+        <p class="hero-subtitle">Black Metal since 1996</p>
+        <a class="btn hero-cta" href="https://open.spotify.com/artist/7e4yn51txFDBXPvlZLp7mO" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-spotify"/></svg>
+            Listen to The Great Descent
+        </a>
+        <span class="scroll-cue" aria-hidden="true"></span>
     </header>
 
-    <!-- CONTEÚDO DO SITE -->
-    <div class="wrapper">
-        
-        <div id="bio" class="bio-content">
-            <p>Founded in 1996 by Delarvoth, Actum Est is the manifestation of a singular and uncompromising vision, a project forged in solitude and shaped by introspection.</p>
-            
-            <p>Actum Est crafts immersive soundscapes where darkness becomes language. Each composition unfolds like a ritual, where cold melodies and oppressive harmonies converge into a vast, introspective experience.</p>
-            
-            <p>Every element is conceived and executed as part of a unified expression, raw, deliberate, and deeply personal.</p>
-            
-            <p>Now unveiled on digital platforms, this release preserves its obscure essence while expanding beyond.</p>
-            
-            <p>The visual identity of Actum Est was developed with the support of Christophe Szpajdel and the artistic collaboration of Stanislav Krawczyk, uniting contemporary vision with the timeless aesthetics of black metal.</p>
-            
-            <p>Every composition, arrangement, and instrument is crafted solely by the artist, rooted in the raw tradition of the 90s and shaped by dedicated, authentic studio work.</p>
-        </div>
+    <main>
 
-        <div class="manifesto">
-            What is done cannot be undone.<br>Actum Est.
-        </div>
+        <!-- BIO -->
+        <section id="bio" aria-labelledby="bio-title">
+            <h2 id="bio-title" class="section-title">Bio</h2>
+            <div class="bio">
+                <p>Founded in 1996 by Delarvoth, Actum Est is the manifestation of a singular and uncompromising vision: a project forged in solitude and shaped by introspection.</p>
 
-       <!-- Seção de Discografia -->
-        <div id="discography" class="section-title">Discography</div>
-        
-        <!-- Card 1: The Great Descent -->
-        <div class="album-card">
-            <img src="https://f4.bcbits.com/img/a0588641916_10.jpg" alt="The Great Descent Album Cover" class="album-cover">
-            <div class="album-info">
-                <div class="album-title">The Great Descent</div>
-                <div class="album-meta">Official Release</div>
-                <div class="album-links">                   
-                    <a href="https://open.spotify.com/artist/7e4yn51txFDBXPvlZLp7mO" target="_blank" rel="noopener noreferrer" class="btn btn-small">
-                        <i class="fa-brands fa-spotify"></i> Spotify
-                    </a>
+                <p>Its music builds immersive soundscapes where darkness becomes language. Each composition unfolds like a ritual, where cold melodies and oppressive harmonies converge into a vast, introspective experience.</p>
+
+                <p>Every composition, arrangement and instrument is written and performed by Delarvoth alone, rooted in the raw tradition of the ’90s and shaped by dedicated studio work. Now released on digital platforms, the work keeps its obscure essence while reaching beyond the underground.</p>
+
+                <p class="credits">Visual identity developed with the support of <strong>Christophe Szpajdel</strong> and the artistic collaboration of <strong>Stanislav Krawczyk</strong>.</p>
+            </div>
+
+            <blockquote class="manifesto">
+                What is done cannot be undone.
+                <cite>Actum Est</cite>
+            </blockquote>
+        </section>
+
+        <!-- DISCOGRAFIA -->
+        <section id="discography" aria-labelledby="disco-title">
+            <h2 id="disco-title" class="section-title">Discography</h2>
+
+            <article class="release release-featured">
+                <img src="https://f4.bcbits.com/img/a0588641916_10.jpg" alt="The Great Descent cover art" class="release-cover" width="300" height="300" loading="lazy">
+                <div>
+                    <p class="release-label">Latest release</p>
+                    <h3 class="release-title">The Great Descent</h3>
+                    <div class="release-links">
+                        <!-- Troque pelo link direto do álbum no Spotify quando tiver -->
+                        <a href="https://open.spotify.com/artist/7e4yn51txFDBXPvlZLp7mO" target="_blank" rel="noopener noreferrer" class="btn btn-small">
+                            <svg class="icon" aria-hidden="true"><use href="#i-spotify"/></svg> Spotify
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </div> <!-- FECHAMENTO DO CARD 1 -->
+            </article>
 
-        <!-- Card 2: Into The Black Mantle -->
-        <div class="album-card">
-            <img src="https://i.scdn.co/image/ab67616d00001e02c52839d453ba0c5dc442ec03" alt="Into The Black Mantle Album Cover" class="album-cover">
-            <div class="album-info">
-                <div class="album-title">Into The Black Mantle</div>
-                <div class="album-meta">Official Release</div>
-                <div class="album-links">                   
-                    <a href="https://open.spotify.com/intl-pt/album/2bNxKkE2P4L1Vvq4cWHrdC?si=dUcubDQqQ5CzakwT9-G8LA" target="_blank" rel="noopener noreferrer" class="btn btn-small">
-                        <i class="fa-brands fa-spotify"></i> Spotify
-                    </a>
+            <article class="release">
+                <img src="https://i.scdn.co/image/ab67616d00001e02c52839d453ba0c5dc442ec03" alt="Into The Black Mantle cover art" class="release-cover" width="180" height="180" loading="lazy">
+                <div>
+                    <h3 class="release-title">Into The Black Mantle</h3>
+                    <div class="release-links">
+                        <a href="https://open.spotify.com/album/2bNxKkE2P4L1Vvq4cWHrdC" target="_blank" rel="noopener noreferrer" class="btn btn-small">
+                            <svg class="icon" aria-hidden="true"><use href="#i-spotify"/></svg> Spotify
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </div> <!-- FECHAMENTO DO CARD 2 -->
-        
-    <!-- SEÇÃO DE VÍDEOS EM DESTAQUE -->
-    <div id="video" class="section-title">Videos</div>
-    
-    <div class="video-grid">
-        <!-- Vídeo 1: We Burn the Skies Tonight -->
-        <div class="video-item">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/p4aBFVsRSFE" title="Actum Est - We Burn the Skies Tonight" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    
-        <!-- Vídeo 2: The Nine Circles -->
-        <div class="video-item">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/8d5oqxbpEkM" title="Actum Est - The Nine Circles" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
+            </article>
+        </section>
 
-        <!-- Seção de Stream -->
-        <div id="stream" class="section-title">Stream</div>
-        
-        <div class="spotify-container">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/7e4yn51txFDBXPvlZLp7mO?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        
-        <!-- Rodapé e Contato -->
+        <!-- VÍDEOS -->
+        <section id="videos" aria-labelledby="videos-title">
+            <h2 id="videos-title" class="section-title">Videos</h2>
+
+            <div class="video-list">
+                <figure>
+                    <div class="video-frame">
+                        <a class="video-play" href="https://www.youtube.com/watch?v=p4aBFVsRSFE" data-id="p4aBFVsRSFE" data-title="Actum Est - We Burn the Skies Tonight" target="_blank" rel="noopener noreferrer">
+                            <img src="https://i.ytimg.com/vi/p4aBFVsRSFE/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+                            <span class="play-mark" aria-hidden="true"></span>
+                            <span class="visually-hidden">Play video: We Burn the Skies Tonight</span>
+                        </a>
+                    </div>
+                    <figcaption class="video-caption">We Burn the Skies Tonight</figcaption>
+                </figure>
+
+                <figure>
+                    <div class="video-frame">
+                        <a class="video-play" href="https://www.youtube.com/watch?v=8d5oqxbpEkM" data-id="8d5oqxbpEkM" data-title="Actum Est - The Nine Circles" target="_blank" rel="noopener noreferrer">
+                            <img src="https://i.ytimg.com/vi/8d5oqxbpEkM/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+                            <span class="play-mark" aria-hidden="true"></span>
+                            <span class="visually-hidden">Play video: The Nine Circles</span>
+                        </a>
+                    </div>
+                    <figcaption class="video-caption">The Nine Circles</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- STREAM -->
+        <section id="stream" aria-labelledby="stream-title">
+            <h2 id="stream-title" class="section-title">Stream</h2>
+            <div class="spotify-embed">
+                <iframe src="https://open.spotify.com/embed/artist/7e4yn51txFDBXPvlZLp7mO?utm_source=generator&amp;theme=0" width="100%" height="352" title="Actum Est on Spotify" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
         <footer id="contact">
-            <div class="links-title">Official Connections</div>
-            
-            <div class="nav-links">
+            <h2 class="links-title">Official connections</h2>
+
+            <div class="footer-links">
                 <a href="https://open.spotify.com/artist/7e4yn51txFDBXPvlZLp7mO" target="_blank" rel="noopener noreferrer" class="btn">
-                    <i class="fa-brands fa-spotify"></i> Spotify
-                </a>                
+                    <svg class="icon" aria-hidden="true"><use href="#i-spotify"/></svg> Spotify
+                </a>
                 <a href="https://www.instagram.com/actumestofficial/" target="_blank" rel="noopener noreferrer" class="btn">
-                    <i class="fa-brands fa-instagram"></i> Instagram
+                    <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg> Instagram
                 </a>
                 <a href="https://www.youtube.com/@actumestofficial" target="_blank" rel="noopener noreferrer" class="btn">
-                    <i class="fa-brands fa-youtube"></i> YouTube
+                    <svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg> YouTube
                 </a>
             </div>
 
-            <div class="contact-box">
-                Contact & Inquiries: <a href="mailto:actumestofficial@gmail.com">actumestofficial@gmail.com</a>
-            </div>
-        </footer>
-    </div>
+            <p class="contact">
+                Contact and inquiries:
+                <a href="mailto:actumestofficial@gmail.com">actumestofficial@gmail.com</a>
+            </p>
 
+            <p class="copyright">© <span id="year">2026</span> Actum Est. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <div class="page-end"></div>
+
+    <script>
+        // Carrega o player do YouTube só quando a pessoa clica
+        document.querySelectorAll('.video-play').forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                var iframe = document.createElement('iframe');
+                iframe.src = 'https://www.youtube-nocookie.com/embed/' + link.dataset.id + '?autoplay=1&rel=0';
+                iframe.title = link.dataset.title;
+                iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                iframe.allowFullscreen = true;
+                link.replaceWith(iframe);
+            });
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
